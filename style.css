@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+@media (min-width: 67.1875em) {
+  h1 {
+    font-size: 4em;
+  }
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+}
+
+#top-menu {
+  background-color: white;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  position: relative;
+  top: 0;
+  left: 0;
+  min-height: 10%;
+  max-height: 17%;
+  height: 13vw;
+  z-index: 900;
+  width: 100%;
+}
+.headbox {
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+}
+#logobox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 180px;
+  max-width: 33.3333%;
+  border-width: 1px;
+  border-style: none solid none none;
+  border-color: black;
+}
+#namebox {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+}
+#menubox {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 340px;
+  max-width: 66.666666%;
+  border-width: 1px;
+  border-style: none solid none solid;
+  border-color: black;
+  overflow-y: hidden;
+}
+#navbox {
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  border-width: 1px;
+  border-style: none none none solid;
+  border-color: black;
+  cursor: default;
+}
+.mburger {
+  margin-top: 1vw;
+  text-align: center;
+  font-size: 40px;
+  line-height: 2;
+}
+.drop-burger {
+  width: 200%;
+  position: absolute;
+  left: -100%;
+  top: 0;
+  display: inline-block;
+  line-height: 1.7;
+  font-size: 22.3px;
+  text-transform: uppercase;
+  font-family: "Russo One", sans-serif;
+  background: #e8e8ea;
+  transition: padding 0.1s ease,
+    height 0.7s cubic-bezier(0.51, 0.02, 0.44, 1.41);
+}
+.drop-burger ul {
+  height: 100%;
+  position: relative;
+  padding: 0;
+  text-align: center;
+}
+.drop-burger li {
+  position: relative;
+  display: none;
+  line-height: auto;
+  list-style-type: none;
+  transition: color 0.21s ease-in-out, transform 0.21s ease;
+}
+.drop-burger li a {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.21s ease-in-out;
+}
+.drop-burger li:hover a,
+.esc-burger:hover {
+  color: #ed1c24;
+  text-decoration: none;
+}
+.drop-burger li:active a,
+.esc-burger:active {
+  color: #c00;
+}
+.esc-burger {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  display: none;
+  top: 0;
+  right: 15px;
+  text-align: right;
+  transition: color 0.23s ease-in-out;
+}
+
+.slide {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0%;
+  transition: left 0.65s ease-out;
+}
+
+.slide-page-1 {
+  left: -19.99%;  
+  -webkit-transition: left 0.65s ease-out;
+  transition: left 0.65s ease-out;
+}
+
+.slide-page-2 {
+  left: -39.99%;  
+  -webkit-transition: left 0.65s ease-out;
+  transition: left 0.65s ease-out;
+}
+
+.slide-page-3 {
+  left: -59.99%;  
+  -webkit-transition: left 0.65s ease-out;
+  transition: left 0.65s ease-out;
+}
+
+.slide-page-4 {
+  left: -79.99%;
+  -webkit-transition: left 0.65s ease-out;
+  transition: left 0.65s ease-out;
+}
+
+.hide {
+  display: none;
+}
+
+
+.table-column {
+  display: inline-block;
+  width: 33%;
+  overflow: hidden;
+}
+.table-row {
+  display: block;
+}
+
+#animationbox {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* .mosaic {} */
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 0;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.box {
+  position: relative;
+  padding-top: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+}
+.thumbnail {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  align-content: center;
+  height: 100%;
+}
+
+@media (max-width: 800px) {
+  /*  .column {
+    width: 50%;
+  } */
+  .drop-burger {
+    font-size: 2.5vw;
+  }
+}
+@media (max-width: 600px) {
+  /* .column {
+    width: 100%;
+  } */
+  .drop-burger {
+    font-size: 12.4px;
+  }
+  .mburger {
+    margin-top: -1vw;
+  }
+}
+@media (max-width: 514px) {
+  #logobox {
+    border-style: none;
+  }
+}
+
+.main-pages {
+  float: left;
+  width: 19.99%;
+  height: 100%;
+}
+
+#main {
+  width: 500%;
+  height: 100%;
+}
