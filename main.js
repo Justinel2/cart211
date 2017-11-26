@@ -21,19 +21,19 @@ window.onload = function() {
   });
 
   $("#logobox").on("click", () => {
-    gotoPage(1);
+    goToPage(1);
   });
 
   $("#burger-work").click(() => {
-    gotoPage(2);
+    goToPage(2);
   });
 
   $("#burger-about").on("click", () => {
-    gotoPage(3);
+    goToPage(3);
   });
 
   $("#burger-contact").on("click", () => {
-    gotoPage(4);
+    goToPage(4);
   });
 
   function init() {
