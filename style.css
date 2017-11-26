@@ -11,24 +11,19 @@
 *:after {
   box-sizing: inherit;
 }
-@media (min-width: 67.1875em) {
-  h1 {
-    font-size: 4em;
-  }
-}
 html,
 body {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
-  /* overflow: hidden; */
+  overflow-x: hidden;
 }
 
 #top-menu {
   background-color: white;
   border-width: 1px;
-  border-style: solid;
+  border-style: solid none;
   border-color: black;
   position: relative;
   top: 0;
@@ -66,7 +61,7 @@ body {
   width: 340px;
   max-width: 66.666666%;
   border-width: 1px;
-  border-style: none solid none solid;
+  border-style: none none none solid;
   border-color: black;
   overflow-y: hidden;
 }
@@ -178,20 +173,30 @@ body {
   display: none;
 }
 
-
 .table-column {
-  display: inline-block;
-  width: 33%;
+  float: left;
   overflow: hidden;
+  border-width: 1px;
+  border-color: black;
+  height: 100%;
 }
+
 .table-row {
   display: block;
 }
 
-#animationbox {
-  position: relative;
-  margin: 0;
-  overflow: hidden;
+#page-1-mywork {
+  width: 180px;
+  max-width: 33.33333%;
+  
+}
+#page-1-animationbox { 
+  max-width: 66.6666666%;
+  border-style: none solid none solid;
+}
+#page-1-right-menu {
+  /* float: right; */
+  width: 24.9%;
 }
 
 /* .mosaic {} */
@@ -247,6 +252,7 @@ body {
   #logobox {
     border-style: none;
   }
+
 }
 
 .main-pages {

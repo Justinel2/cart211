@@ -18,6 +18,10 @@ window.onload = function() {
     }, 200);
   }); 
   
+  $("#nav-home").click(() => {
+    clearPages();
+    $("#page2").addClass("slide-page-2");      
+  });
   // todo HOME page 1
   // $("#burger-work").click(() => {
     
