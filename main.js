@@ -1,13 +1,15 @@
 window.onload = function() {
   init();
 
-  $("#navbox").hover(function() {
+  $("#navbox").click(function() {
     $(".drop-burger").show();
     $(".drop-burger").css.zIndex = "2";
     $(".drop-burger").animate({ height: "100%" }, 100, () => {
       $(".drop-burger li").fadeIn(700);
     });
-  },
+  });
+
+  $("#navbox").hover(null,
   function() {
     $(".drop-burger li").fadeOut(300);
     $(".drop-burger").animate({ height: "0px" }, 100);
