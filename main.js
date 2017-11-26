@@ -17,6 +17,7 @@ window.onload = function() {
     setTimeout(function() {
       document.querySelector(".drop-burger").style.zIndex = "0";
     }, 200);
+
   });
 
   $("#logobox").on("click", () => {
