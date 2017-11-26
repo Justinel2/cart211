@@ -1,5 +1,6 @@
 window.onload = function() {
   init();
+
   $(".mburger").on("click", function() {
     $(".drop-burger").show();
     $(".drop-burger").css.zIndex = "2";
@@ -16,30 +17,31 @@ window.onload = function() {
     setTimeout(function() {
       document.querySelector(".drop-burger").style.zIndex = "0";
     }, 200);
-  }); 
-  
-  // todo HOME page 1
-  // $("#burger-work").click(() => {
-    
-  // });
+  });
+
+  $("#logobox").on("click", () => {
+    gotoPage(1);
+  });
 
   $("#burger-work").click(() => {
-    clearPages();
-    $("#page2").addClass("slide-page-2");      
+    gotoPage(2);
   });
 
   $("#burger-about").on("click", () => {
-    clearPages()
-    $("#page3").addClass("slide-page-3");
+    gotoPage(3);
   });
 
   $("#burger-contact").on("click", () => {
-    clearPages()
-    $("#page4").addClass("slide-page-4");
+    gotoPage(4);
   });
 
-  function init() {    
-    $("#page1").addClass("slide-page-1");      
+  function init() {
+    goToPage(1) ;
+  };
+
+  function goToPage(number) {
+    clearPages();
+    $("#page" + number).addClass("slide-page-" + number);
   };
 
   function clearPages() {

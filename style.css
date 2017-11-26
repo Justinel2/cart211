@@ -151,19 +151,19 @@ body {
 }
 
 .slide-page-1 {
-  left: -19.99%;  
+  left: -19.99%;
   -webkit-transition: left 0.65s ease-out;
   transition: left 0.65s ease-out;
 }
 
 .slide-page-2 {
-  left: -39.99%;  
+  left: -39.99%;
   -webkit-transition: left 0.65s ease-out;
   transition: left 0.65s ease-out;
 }
 
 .slide-page-3 {
-  left: -59.99%;  
+  left: -59.99%;
   -webkit-transition: left 0.65s ease-out;
   transition: left 0.65s ease-out;
 }
