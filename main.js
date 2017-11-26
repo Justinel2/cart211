@@ -1,24 +1,22 @@
 window.onload = function() {
   init();
 
-  $(".mburger").on("click", function() {
+  $("#navbox").hover(function() {
     $(".drop-burger").show();
     $(".drop-burger").css.zIndex = "2";
-    $(".drop-burger").animate({ height: "100%" }, 100);
-    $(".esc-burger").show(400);
-    $(".drop-burger li").fadeIn(700);
-  });
-
-  $(".drop-burger").on("click", function() {
-    $(".esc-burger").hide();
+    $(".drop-burger").animate({ height: "100%" }, 100, () => {
+      $(".drop-burger li").fadeIn(700);
+    });
+  },
+  function() {
     $(".drop-burger li").fadeOut(300);
     $(".drop-burger").animate({ height: "0px" }, 100);
 
     setTimeout(function() {
       document.querySelector(".drop-burger").style.zIndex = "0";
     }, 200);
-
-  });
+  }
+);
 
   $("#logobox").on("click", () => {
     goToPage(1);
