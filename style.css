@@ -156,9 +156,7 @@ body {
 }
 
 #page-1-mywork {
-  width: 180px;
-  max-width: 33.33333%;
-
+  width: 25%;
 }
 #page-1-animationbox {
   min-width: 47.8%;
@@ -235,11 +233,15 @@ figcaption {
     margin-top: -1vw;
   }
 }
+
 @media (max-width: 514px) {
   #logobox {
-    border-style: none;
+    border: none;
   }
 
+  #namebox {
+    display: none;
+  }
 }
 
 .main-pages {
