@@ -229,17 +229,11 @@ figcaption {
   color: white;
   font-size: 180%;
 }
+
+/* for ipad + viewport */
 @media (max-width: 800px) {
   .column {
     width: 50%;
-  }
-  .drop-burger {
-    font-size: 2.5vw;
-  }
-}
-@media (max-width: 600px) {
-  .column {
-    width: 100%;
   }
   .drop-burger {
     font-size: 12.4px;
@@ -247,10 +241,6 @@ figcaption {
   .mburger {
     margin-top: -1vw;
   }
-}
-
-/* Small/Mobile format */
-@media (max-width: 500px) {
   #main {
     height: 80%;
   }
@@ -292,10 +282,44 @@ figcaption {
   #page-1-right-menu {
     display: none;
   }
+  .column {
+    width: 100%;
+  }
 }
 
+/* Small/Mobile format */
+@media (max-width: 500px) {
+  
+}
 .main-pages {
   float: left;
   width: 19.99%;
   height: 100%;
+}
+
+.container {width: 500px; margin: 50px auto}
+
+.modal {
+  background-color: #dbd9d9;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 200px;
+  margin-left: -200px;
+  margin-top: -150px;
+  padding: 50px;
+  border-radius: 5px;
+  z-index: 10;
+  box-shadow: 0 0 0 99999px rgba(0, 0, 0, 0.7);
+}
+
+.close-modal {
+  color:  #000;
+  text-decoration: none;
+  float: right;
+  position: absolute;
+  top: 10px;
+  right: 20px
 }

@@ -51,4 +51,13 @@ window.onload = function () {
     $("#page3").removeClass("slide-page-3");
     $("#page4").removeClass("slide-page-4");
   }
+  var modal = $('.modal');
+  $('.show-modal').click(function() {
+   modal.fadeIn();
+  });
+  
+  $('.close-modal').click(function() {
+   modal.fadeOut();
+  });
+  
 };
