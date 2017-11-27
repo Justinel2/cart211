@@ -52,12 +52,48 @@ window.onload = function () {
     $("#page4").removeClass("slide-page-4");
   }
   var modal = $('.modal');
-  $('.show-modal').click(function() {
-   modal.fadeIn();
+  var modalIsOpened = false;
+  $('.show-modal').click(function (event) {
+    if (!modalIsOpened) {
+      modalIsOpened = true;
+
+      event.stopPropagation();
+
+      const id = jQuery(this).attr("id");
+      const media = medias[id];
+
+      // Clean up previous content
+      $("#modal-media").empty();
+      $("#modal-media-description").empty();
+
+      // Fill with new content
+      $('<img/>', {
+        'src': media.path
+      }).appendTo('#modal-media');
+
+      $('<p/>', {
+        'html': media.description
+      }).appendTo('#modal-media-description');
+
+      modal.fadeIn();
+    }
   });
-  
-  $('.close-modal').click(function() {
-   modal.fadeOut();
+
+  $(window).click(function () {
+    if(modalIsOpened) {
+      modalIsOpened = false;
+      modal.fadeOut();
+    }
   });
-  
+
+  $('.modal').click(function (event) {
+    event.stopPropagation();
+  });
+};
+
+const medias = {
+  "media-1": {
+    path: "coucherdesoleil.jpeg",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+  }
 };
