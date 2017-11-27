@@ -11,6 +11,7 @@
 *:after {
   box-sizing: inherit;
 }
+
 html,
 body {
   height: 100%;
@@ -18,6 +19,15 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+}
+
+#main {
+  width: 500%;
+  height: 100%;
+}
+
+#footer {
+  display: none;
 }
 
 #top-menu {
@@ -35,19 +45,23 @@ body {
 .headbox {
   width: 100%;
 }
+
 #logobox {
+  width: 19.9%;
   position: relative;
-  max-width: 33.3333%;
   border-width: 1px;
   border-style: none solid none none;
   border-color: black;
 }
 #namebox {
+  width: 39.9%;
   position: relative;
   margin: 0;
   overflow: hidden;
+  width: 19.9;
 }
 #menubox {
+  width: 19.9%;
   position: relative;
   right: 0;
   top: 0;
@@ -58,6 +72,7 @@ body {
   overflow-y: hidden;
 }
 #navbox {
+  width: 19.9%;
   position: relative;
   text-align: center;
   border-color: black;
@@ -234,12 +249,47 @@ figcaption {
   }
 }
 
-@media (max-width: 514px) {
+/* Small/Mobile format */
+@media (max-width: 500px) {
+  #main {
+    height: 80%;
+  }
+
+  #footer {
+    display: block;
+    height: 10%;
+    border-width: 1px;
+    border-style: solid none none none;
+    border-color: black;
+  }
+
   #logobox {
+    width: 33.33%;
     border: none;
   }
 
   #namebox {
+    display: none;
+  }
+
+  #menubox {
+    width: 33.33%;
+  }
+
+  #navbox {
+    width: 33.33%;
+  }
+
+  #page-1-mywork {
+    width: 33.3%;
+  }
+
+  #page-1-animationbox {
+    width: 66.2%;
+    border-right: none;
+  }
+
+  #page-1-right-menu {
     display: none;
   }
 }
@@ -247,10 +297,5 @@ figcaption {
 .main-pages {
   float: left;
   width: 19.99%;
-  height: 100%;
-}
-
-#main {
-  width: 500%;
   height: 100%;
 }

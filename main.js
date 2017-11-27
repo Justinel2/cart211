@@ -1,7 +1,7 @@
-window.onload = function() {
+window.onload = function () {
   init();
 
-  $("#navbox").click(function() {
+  $("#navbox").click(function () {
     $(".drop-burger").show();
     $(".drop-burger").css.zIndex = "2";
     $(".drop-burger").animate({ height: "100%" }, 100, () => {
@@ -10,15 +10,15 @@ window.onload = function() {
   });
 
   $("#navbox").hover(null,
-  function() {
-    $(".drop-burger li").fadeOut(300);
-    $(".drop-burger").animate({ height: "0px" }, 100);
+    function () {
+      $(".drop-burger li").fadeOut(300);
+      $(".drop-burger").animate({ height: "0px" }, 100);
 
-    setTimeout(function() {
-      document.querySelector(".drop-burger").style.zIndex = "0";
-    }, 200);
-  }
-);
+      setTimeout(function () {
+        document.querySelector(".drop-burger").style.zIndex = "0";
+      }, 200);
+    }
+  );
 
   $("#logobox").on("click", () => {
     goToPage(1);
@@ -37,7 +37,7 @@ window.onload = function() {
   });
 
   function init() {
-    goToPage(1) ;
+    goToPage(1);
   };
 
   function goToPage(number) {
