@@ -1,5 +1,3 @@
-@import "compass/css3";
-
 * {
   margin: 0;
   padding: 0;
@@ -27,7 +25,7 @@ body {
   height: 100%;
 }
 
-#footer {
+#page-1-footer {
   display: none;
 }
 
@@ -183,8 +181,8 @@ body {
   border-style: none solid none solid;
 }
 
-#page-1-contact #footer-contact {
-  border-style: solid none;
+#page-1-contact, #page-1-footer-contact {
+  border-style: solid none none none;
   border-width: 1px;
 }
 
@@ -238,6 +236,7 @@ body {
 #page2 figure:hover img {
 	margin-left: 0;
 }
+
 figcaption {
   position: absolute;
   top: 50%;
@@ -265,17 +264,17 @@ figcaption {
     margin-top: -1vw;
   }
   #main {
-    height: 60%;
+    height: 90%;
   }
 
-  #footer {
+  #page-1-footer {
     display: block;
     height: 30%;
     border-width: 1px;
     border-style: solid none none none;
     border-color: black;
   }
-  
+
   #logobox {
     width: 33.33%;
     border: none;
@@ -317,15 +316,19 @@ figcaption {
 .main-pages {
   float: left;
   width: 19.99%;
-  height: 89.7vh;
+  height: 100%;
 }
 
 #page1 {
   height: 100%;
 }
 
-.container {
-  width: 500px; margin: 50px auto
+#page-1-main {
+  height: 80%;
+}
+
+#page-1-footer {
+  height: 20%;
 }
 
 .modal {
@@ -366,4 +369,3 @@ figcaption {
   text-align: center;
   opacity: 1;
 }
-
