@@ -1,3 +1,5 @@
+@import "compass/css3";
+
 * {
   margin: 0;
   padding: 0;
@@ -18,9 +20,8 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow: hidden;
 }
-
 #main {
   width: 500%;
   height: 100%;
@@ -77,6 +78,7 @@ body {
   text-align: center;
   border-color: black;
   cursor: default;
+  overflow-y: scroll;
 }
 .mburger {
   text-align: center;
@@ -168,18 +170,31 @@ body {
 
 .table-row {
   display: block;
+  height: 50%;
 }
 
 #page-1-mywork {
-  width: 25%;
+  width: 19.89%;
 }
+
 #page-1-animationbox {
-  min-width: 47.8%;
+  min-width: 40%;
   max-width: 66.6666666%;
   border-style: none solid none solid;
 }
+
+#page-1-contact #footer-contact {
+  border-style: solid none;
+  border-width: 1px;
+}
+
 #page-1-right-menu {
-  width: 24.9%;
+  width: 39.86%;
+}
+.row {
+  position: relative;
+  height: 87.5vh;
+  z-index: 5;
 }
 .column {
   float: left;
@@ -210,6 +225,9 @@ body {
   align-content: center;
   height: 100%;
 }
+#page2 {
+  overflow-y: scroll;
+}
 #page2 figure img {
 	margin-left: 30px;
 	-webkit-transform: scale(1.5);
@@ -230,6 +248,11 @@ figcaption {
   font-size: 180%;
 }
 
+/* #page3 {
+  background-color: red;
+} */
+
+
 /* for ipad + viewport */
 @media (max-width: 800px) {
   .column {
@@ -242,17 +265,17 @@ figcaption {
     margin-top: -1vw;
   }
   #main {
-    height: 80%;
+    height: 60%;
   }
 
   #footer {
     display: block;
-    height: 10%;
+    height: 30%;
     border-width: 1px;
     border-style: solid none none none;
     border-color: black;
   }
-
+  
   #logobox {
     width: 33.33%;
     border: none;
@@ -282,42 +305,65 @@ figcaption {
   #page-1-right-menu {
     display: none;
   }
-  .column {
-    width: 100%;
-  }
 }
 
 /* Small/Mobile format */
 @media (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
 
 }
 .main-pages {
   float: left;
   width: 19.99%;
+  height: 89.7vh;
+}
+
+#page1 {
   height: 100%;
 }
 
-.container {width: 500px; margin: 50px auto}
-
-.modal {
-  background-color: #dbd9d9;
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  z-index: 10;
-  box-shadow: 0 0 0 99999px rgba(0, 0, 0, 0.7);
+.container {
+  width: 500px; margin: 50px auto
 }
 
-.close-modal {
-  color:  #000;
-  text-decoration: none;
-  float: right;
+.modal {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 90vw;
+  top: 50%;
+  left: 50%;
+  margin-top: -40vh;
+  margin-left: -45vw;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid black;
+  overflow-y: hidden;
+}
+
+#modal-media {
+  width: 100%;
+  height: 100%;
+  line-height: 115px;
+  text-align: center;
+}
+
+#modal-media img {
+  max-width:100%;
+  max-height:100%;
+  vertical-align: middle;
+}
+
+#scroll-down {
   position: absolute;
-  top: 10px;
-  right: 20px
+  margin-top: -5%;
+  text-align: center;
 }
 
 #modal-media-description {
   text-align: center;
+  opacity: 1;
 }
+
